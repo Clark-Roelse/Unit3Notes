@@ -5,6 +5,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Title</title>
     <style>
+        .navy{
+            background-color:navy;
+        }
+        .royal{
+            background-color:royalblue;
+        }
+        .violet{
+            background-color:violet;
+        }
         .red{
             background-color:red;
         }
@@ -23,6 +32,15 @@
         .purple{
             color:purple;
         }
+        .yellow{
+             color:yellow;
+         }
+        .orange{
+            color:orange;
+        }
+        .brown{
+            color:brown;
+        }
     </style>
 </head>
 <body>
@@ -34,12 +52,18 @@
             <button id="1">Red</button>
             <button id="2">Green</button>
             <button id="3">Blue</button>
+            <button id="4">Navy</button>
+            <button id="5">Royal</button>
+            <button id="6">Violet</button>
         </div>
         <div class="row">
             <h3>Text</h3>
-            <button id="4">Pink</button>
-            <button id="5">Teal</button>
-            <button id="6">Purple</button>
+            <button id="7">Pink</button>
+            <button id="8">Teal</button>
+            <button id="9">Purple</button>
+            <button id="10">Yellow</button>
+            <button id="11">Orange</button>
+            <button id="12">Brown</button>
         </div>
         <button id="clear">Clear</button>
     </div>
@@ -49,12 +73,33 @@
     const red = document.getElementById('1');
     const green = document.getElementById('2');
     const blue = document.getElementById('3');
+    const navy = document.getElementById('4');
+    const royal = document.getElementById('5');
+    const violet = document.getElementById('6');
 
-    const pink = document.getElementById('4');
-    const teal = document.getElementById('5');
-    const purple = document.getElementById('6');
+    const pink = document.getElementById('7');
+    const teal = document.getElementById('8');
+    const purple = document.getElementById('9');
+    const yellow = document.getElementById('10');
+    const orange = document.getElementById('11');
+    const brown = document.getElementById('12');
 
     const clearButton = document.getElementById('clear');
+
+    violet.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('violet');
+    });
+
+    royal.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('royal');
+    });
+
+    navy.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('navy');
+    });
 
     red.addEventListener('click', function(e){
         removeBGColor();
@@ -86,6 +131,21 @@
         content.classList.add('purple');
     });
 
+    yellow.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('yellow');
+    });
+
+    orange.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('orange');
+    });
+
+    brown.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('brown');
+    });
+
     clearButton.addEventListener('click', function(e){
         removeTExtColor();
         removeBGColor();
@@ -95,12 +155,18 @@
         content.classList.remove('red');
         content.classList.remove('green');
         content.classList.remove('blue');
+        content.classList.remove('navy');
+        content.classList.remove('royal');
+        content.classList.remove('violet');
     }
 
     function removeTextColor(){
         content.classList.remove('pink');
         content.classList.remove('teal');
         content.classList.remove('purple');
+        content.classList.remove('yellow');
+        content.classList.remove('orange');
+        content.classList.remove('brown');
     }
 </script>
 </body>
