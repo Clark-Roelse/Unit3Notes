@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="content">
+        <h3>What is this?</h3>
+        <h4>I dont want this</h4>
+        <script>
+            const content = document.querySelector('.content');
+            //Replace contents of an HTML tag using innerHTML
+            content.innerHTML = '<h1>I love Zelda</h1><h4>Some other message here</h4>';
+
+            //add a new element in addition to existing elements
+            const zelda = document.createElement('h1');
+            zelda.innerHTML = 'I love Zelda';
+            content.appendChild(zelda);
+
+            //add a new element in addition to existing elements
+            const link = document.createElement('h1');
+            link.innerHTML = 'I love Link';
+            content.appendChild(link);
+
+            //add a new element in addition to existing elements
+            const mario = document.createElement('h1');
+            mario.innerHTML = 'I love Mario';
+            content.appendChild(mario);
+
+            //add a new element in addition to existing elements
+            const luigi = document.createElement('h1');
+            luigi.innerHTML = 'I love Luigi';
+            content.appendChild(luigi);
+
+            //put this at top in addition to existing elements
+            const food = document.createElement('h1')
+            food.innerHTML = 'I love Pizza';
+            content.insertAdjacentElement('beforeend', food);
+
+            //to remove an element
+            const unwantedElement = document.querySelector('h4');
+            unwantedElement.remove();
+
+        </script>
+    </div>
+</div>
+</body>
+</html>
